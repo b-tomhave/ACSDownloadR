@@ -10,10 +10,18 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("ACSDownloadR")
+      h1("ACSDownloadR"),
+      mod_geography_selections_ui("geography_selections_1"),
+      mod_map_selections_ui("map_selections_1"),
+      h4("Map Above")
     )
   )
 }
+
+
+
+# Display this message somewhere:
+#"This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau."
 
 #' Add external Resources to the Application
 #'

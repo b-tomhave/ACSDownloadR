@@ -16,6 +16,8 @@
 ## Dependencies ----
 ## Amend DESCRIPTION with dependencies read from package code parsing
 # Add one line for each package dependency
+usethis::use_pipe(export = TRUE) # Adds %>%
+
 usethis::use_package("shiny")
 usethis::use_package("pkgload")
 usethis::use_package("config")
@@ -25,7 +27,9 @@ usethis::use_package("shinyWidgets")
 usethis::use_package("dplyr")
 usethis::use_package("shinydashboard")
 usethis::use_package("sf")
-
+usethis::use_package("leaflet")
+usethis::use_package("tidycensus")
+usethis::use_package("data.table")
 attachment::att_amend_desc()
 
 
@@ -35,6 +39,7 @@ attachment::att_amend_desc()
 # golem::add_module(name = "variable_selections", with_test = TRUE) # Name of the module
 # golem::add_module(name = "map_overview", with_test = TRUE) # Name of the module
 # golem::add_module(name = "map_selections", with_test = TRUE) # Name of the module
+# golem::add_module(name = "state_selections", with_test = TRUE)
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -50,7 +55,8 @@ golem::add_sass_file("custom")
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw(name = "fullVariableDefns", open = FALSE)
+#usethis::use_data_raw(name = "fullVariableDefns", open = FALSE)
+#usethis::use_data_raw(name = "geogData", open = FALSE)
 
 ## Tests ----
 ## Add one line by test you want to create
